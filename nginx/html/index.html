@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Postgresty Demo</title>
+        <meta charset='utf-8'> 
+        
+        <link rel="stylesheet" type="text/css" href="medium.css">
+        <link rel="stylesheet" type="text/css" href="docs/docs.css">
+    </head>
+
+    <body>
+        <div class="wrap">
+
+            <h3>Postgresty Demo</h3>
+            
+            <h4>Title</h4>
+            <div id="title" class="title demo"></div>
+            
+            <h4>Article</h4>
+            <div id="article" class="article demo"></div>
+
+	    <p>page based on <a href="http://jakiestfu.github.io/Medium.js/docs/">Medium.js docs</a>
+        </div>
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="medium.js"></script>
+        <script src="docs/docs.js"></script>
+        <script>
+          $("#title").on("blur", function(){
+            var title = $("#title").text(),
+                body = $("#article").text();
+            if (title!=="" && body!=="") {
+            $.ajax({
+              url: "/articles",
+              method: "POST",
+              data: {title:title,body:body}
+            })
+            .done(function(data,textStatus,xhr){ console.log(data); })
+            .fail(function(xhr,textStatus,error){ console.log(textStatus); });
+            }
+          });
+        </script>
+    </body>
+</html>
