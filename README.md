@@ -5,7 +5,7 @@ Postgresty
 
 Install script assumes a Debian-based Linux distribution, /opt/openresty for the installation directory, and installs OpenResty 1.4.2.7.
 
-Move files in the nginx to /opt/openresty/nginx/ after the installation script runs. Start up nginx and try out the demo on port 8080.
+Move files in the nginx folder to /opt/openresty/nginx/ after the installation script runs. Start up nginx and try out the demo on port 8080.
 
 Make sure to change your Postgres login credentials in nginx.conf and run the create.sql script in Postgres. 
 
