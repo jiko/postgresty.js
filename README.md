@@ -11,4 +11,4 @@ Make sure to change your Postgres login credentials in `nginx/conf/nginx.conf` a
 
 Copy the files in the `nginx` directory to their corresponding places in your OpenResty install.
 
-You will see that I have included a basic demo that does an AJAX POST to your newly created API. Look at your JavaScript console for some basic debugging info from [Medium.js](http://jakiestfu.github.io/Medium.js/docs/) and Postgresty.
+You will see that I have included a basic demo that does an AJAX POST to your newly created API when you click the "Save" button. Look at your JavaScript console for some basic debugging info from [Medium.js](http://jakiestfu.github.io/Medium.js/docs/) and Postgresty.

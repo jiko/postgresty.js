@@ -3,30 +3,35 @@
     <head>
         <title>Postgresty Demo</title>
         <meta charset='utf-8'> 
-        
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="medium.css">
         <link rel="stylesheet" type="text/css" href="docs/docs.css">
     </head>
 
-    <body>
+    <body style="padding-top: 70px;">
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+          <header class="navbar-header navbar-brand">Postgresty Demo</header>
+          <button id="save" type="button" class="btn btn-default navbar-btn">Save</button>
+        </nav>
+
         <div class="wrap">
 
-            <h3>Postgresty Demo</h3>
-            
             <h4>Title</h4>
             <div id="title" class="title demo"></div>
             
             <h4>Article</h4>
             <div id="article" class="article demo"></div>
 
-	    <p>page based on <a href="http://jakiestfu.github.io/Medium.js/docs/">Medium.js docs</a>
+      	    <p>page based on <a href="http://jakiestfu.github.io/Medium.js/docs/">Medium.js docs</a>
+
         </div>
         
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="medium.js"></script>
         <script src="docs/docs.js"></script>
         <script>
-          $("#title").on("blur", function(){
+          $("#save").on("click", function(){
             var title = $("#title").text(),
                 body = $("#article").text();
             if (title!=="" && body!=="") {
