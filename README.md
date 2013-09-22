@@ -1,7 +1,7 @@
 Postgresty
 ===
 
-[Based on this blog post](http://rny.io/nginx/postgresql/2013/07/26/simple-api-with-nginx-and-postgresql.html). When I followed his steps and tried to get the API to accept POST XHRs, I ran into problems, hence this repo.
+[Based on this blog post](http://rny.io/nginx/postgresql/2013/07/26/simple-api-with-nginx-and-postgresql.html). When I followed his steps and tried to get the API to accept POST XHRs, I ran into problems.
 
 Make sure to change your Postgres login credentials in `nginx/conf/nginx.conf` and run the `create.sql` script in Postgres. 
 
@@ -11,4 +11,4 @@ Check out the [OpenResty Installation guide](http://openresty.org/#Installation)
 
 Copy the files in the `nginx` directory to their corresponding places in your OpenResty install.
 
-You will see that I have included a basic demo that does an AJAX POST to your newly created API. Look at your JavaScript console for some basic debugging info from Medium.js and Postgresty.
+You will see that I have included a basic demo that does an AJAX POST to your newly created API. Look at your JavaScript console for some basic debugging info from [Medium.js](http://jakiestfu.github.io/Medium.js/docs/) and Postgresty.
