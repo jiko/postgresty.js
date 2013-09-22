@@ -1,12 +1,21 @@
 #!/bin/bash
-# run as root
 
-apt-get install libpcre3-dev build-essential libssl-dev sudo libreadline-dev postgresql libpq-dev libncurses5-dev libpcre3-dev libssl-dev perl make
+BASEPATH=${1:-"/usr/local/openresty"}
+
+sudo apt-get install libpcre3-dev build-essential libssl-dev sudo libreadline-dev postgresql libpq-dev libncurses5-dev libpcre3-dev libssl-dev perl make
 
 wget http://openresty.org/download/ngx_openresty-1.4.2.7.tar.gz
 tar xzvf ngx*.tar.gz
 cd ngx_*
-./configure --prefix=/opt/openresty --with-luajit --with-http_postgres_module -j2
-make -j2
-make install -j2
+./configure --prefix=$BASEPATH --with-luajit --with-http_postgres_module
+make
+sudo make install
 
+echo
+echo Customize the configuration files nginx/conf/nginx.conf and create.sql
+echo
+echo Make sure to create the database with create.sql
+echo
+echo Copy the files in the nginx directory to the corresponding places in your new OpenResty install
+echo
+echo Start the server with the command .$BASEPATH/nginx/bin/nginx
