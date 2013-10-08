@@ -5,7 +5,7 @@ Postgresty
 
 Check out the [OpenResty Installation guide](http://openresty.org/#Installation). You may want to customize `install.sh` before you run it.
 
-`install.sh` assumes a Debian-based Linux distribution and installs OpenResty 1.4.2.7. You can pass an installation directory as the first argument to the script, or stick with the default `/usr/local/openresty`.
+`install.sh` assumes a Debian-based Linux distribution and installs OpenResty 1.4.2.9. You can pass an installation directory as the first argument to the script, or stick with the default `/usr/local/openresty`.
 
 Make sure to change your Postgres login credentials in `nginx/conf/nginx.conf` and run the `init.sql` script in Postgres. 
 
