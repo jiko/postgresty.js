@@ -4,7 +4,7 @@ BASEPATH=${1:-"/usr/local/openresty"}
 
 sudo apt-get install libpcre3-dev build-essential libssl-dev sudo libreadline-dev postgresql libpq-dev libncurses5-dev libpcre3-dev libssl-dev perl make
 
-wget http://openresty.org/download/ngx_openresty-1.4.2.7.tar.gz
+wget http://openresty.org/download/ngx_openresty-1.4.2.9.tar.gz
 tar xzvf ngx*.tar.gz
 cd ngx_*
 ./configure --prefix=$BASEPATH --with-luajit --with-http_postgres_module
