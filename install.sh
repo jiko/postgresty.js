@@ -12,9 +12,9 @@ make
 sudo make install
 
 echo
-echo Customize the configuration files nginx/conf/nginx.conf and create.sql
+echo Customize nginx/conf/nginx.conf
 echo
-echo Make sure to create the database with create.sql
+echo Customize init.sql and run 'su - postgres psql -f init.sql'
 echo
 echo Copy the files in the nginx directory to the corresponding places in your new OpenResty install
 echo

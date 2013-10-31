@@ -7,8 +7,8 @@ Check out the [OpenResty Installation guide](http://openresty.org/#Installation)
 
 `install.sh` assumes a Debian-based Linux distribution and installs OpenResty 1.4.2.9. You can pass an installation directory as the first argument to the script, or stick with the default `/usr/local/openresty`.
 
-Make sure to change your Postgres login credentials in `nginx/conf/nginx.conf` and run the `init.sql` script in Postgres. 
+Make sure to change your Postgres login credentials in `nginx/conf/nginx.conf` and run `su - postgres psql -f init.sql` to initialize the Postgres database. I've had some trouble with this command, so YMMV. 
 
-Copy the files in the `nginx` directory to their corresponding places in your OpenResty install.
+Copy the files in the `nginx` directory to their corresponding places in your OpenResty install. If you changed your OpenResty installation directory in the `install.sh` step you will need to edit `nginx.conf` to reflect that change.
 
 You will see that I have included a basic demo that does an AJAX POST to your newly created API when you click the "Save" button. Look at your JavaScript console for some basic debugging info from [Medium.js](http://jakiestfu.github.io/Medium.js/docs/) and Postgresty.

@@ -1,5 +1,7 @@
 CREATE DATABASE articledb WITH OWNER username ENCODING 'UTF8';
 
+USE articledb;
+
 CREATE TABLE articles (
   id serial PRIMARY KEY,
   title varchar(50) NOT NULL,
